@@ -33,7 +33,11 @@ Host a React-based landing page on **AWS S3** with **CloudFront** for global, fa
      ```bash
      npm run build
      ```
-   - Uploaded to S3:  
+   - Uploaded to S3:
+     ```bash
+     aws s3 sync dist/ s3://day2-react-website --recursive
+     ```
+     
      ```bash
      aws s3 sync dist/ s3://day2-react-website --delete
      ```
@@ -43,7 +47,7 @@ Host a React-based landing page on **AWS S3** with **CloudFront** for global, fa
 3. **Enabled Static Website Hosting**
    - S3 → Properties → Static website hosting → Enable  
    - Index document: `index.html`  
-   - Error document: `index.html` (important for React SPA)  
+   - Error document: `index.html` 
    - 📸 *Screenshot:*  
      ![Static Hosting Enabled](./S3-enabled-static-hosting.png)
 
@@ -68,14 +72,14 @@ Host a React-based landing page on **AWS S3** with **CloudFront** for global, fa
 
 5. **Deployed CloudFront Distribution**
    - Created Web Distribution → Origin: S3 bucket  
-   - Optional: skipped custom domain & WAF  
+   - Optional: skipped custom domain & WAF (involves costing) 
    - Default Root Object: `index.html`  
    - 📸 *Screenshot:*  
      ![CloudFront Deployed](./cloudfront-deployed.png)
 
 6. **Tested Website**
-   - Opened CloudFront URL (e.g., `d123abc.cloudfront.net`)  
-   - React landing page loaded successfully  
+   - Opened CloudFront URL 
+   - Wesbite loaded successfully  
    - 📸 *Screenshot:*  
      ![Website Tested](./cloudfront-deployed-website.png)
 
@@ -84,4 +88,4 @@ Host a React-based landing page on **AWS S3** with **CloudFront** for global, fa
 ✅ End of Day 2
 - Successfully hosted and deployed a React SPA on S3 with CloudFront for CDN acceleration.
 - Learned to configure public access, static hosting, and bucket policies for secure static sites.
-- CLI sync with `--delete` ensures builds stay in sync; CloudFront enables HTTPS and global speed.
+- CLI sync with `--recursive` & `--delete` ensures builds stay in sync; CloudFront enables HTTPS and global speed.
