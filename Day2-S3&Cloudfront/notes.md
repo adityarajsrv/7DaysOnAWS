@@ -38,7 +38,7 @@ Host a React-based landing page on **AWS S3** with **CloudFront** for global, fa
      aws s3 sync dist/ s3://day2-react-website --delete
      ```
    - 📸 *Screenshot:*  
-     ![Upload CLI](./S3-files-upload-cli.png)
+     ![Upload CLI](./S3-files-upload-CLI.png)
 
 3. **Enabled Static Website Hosting**
    - S3 → Properties → Static website hosting → Enable  
