@@ -1,4 +1,3 @@
-```markdown
 # Day 3 – Compute & Networking: EC2 + VPC
 
 **Goal:** Deploy a Node/Express API on an EC2 instance inside a custom VPC, demonstrating compute and networking fundamentals in AWS.
