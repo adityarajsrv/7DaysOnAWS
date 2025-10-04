@@ -1,7 +1,7 @@
 # Day 4 — Deploy MERN App on AWS EC2
 
 ## What I Did Today
-I deployed one of my project HireMe on AWS EC2. You can check out the code: https://github.com/adityarajsrv/HireMe
+I deployed one of my projects HireMe on AWS EC2. You can check out the code: https://github.com/adityarajsrv/HireMe
 
 ### Step 1: Set Up VPC and Networking
 - Created a custom VPC with CIDR block 10.0.0.0/16
@@ -31,7 +31,7 @@ I deployed one of my project HireMe on AWS EC2. You can check out the code: http
 ```bash
 ssh -i "hireme-key.pem" ec2-user@<EC2-IP>
 ```
-Got terminal access to my EC2 server and started deployment process
+Got terminal access to my EC2 server and started the deployment process
 
 ![SSH Connected](./connect-to-ssh-deploy.png)
 
@@ -122,7 +122,7 @@ sudo systemctl restart nginx
 
 ### Step 8: Tested the Full Application
 Opened `http://<EC2-IP>` - my project HireMe is live! 🎉
-The job portal application with authentication, job listings, and applications working perfectly.
+The project with authentication setup works perfectly.
 
 ![Browser Test](./browser-test.png)
 
